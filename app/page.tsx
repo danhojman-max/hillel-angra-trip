@@ -26,7 +26,7 @@ export default function HomePage() {
                 <img
                   src="/logo/logo.png"
                   alt="Hillel Latam Trip - Club Med Angra"
-                  className="h-56 w-auto md:h-64"
+                  className="h-auto w-full max-w-[520px] object-contain md:max-w-[680px]"
                 />
               </div>
 
