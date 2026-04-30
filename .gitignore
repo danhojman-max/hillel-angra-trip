@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+dist
+.vercel
+
+.DS_Store
+*.log
+WhatsApp Image *.jpeg
+
+.env
+.env.local
+.env.*.local
+
