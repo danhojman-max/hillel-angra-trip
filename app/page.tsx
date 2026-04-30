@@ -1,6 +1,5 @@
 import { Gallery } from "@/app/components/Gallery";
 import { TripForm } from "@/app/components/TripForm";
-import Image from "next/image";
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
@@ -24,16 +23,11 @@ export default function HomePage() {
               </div>
 
               <div className="mt-5">
-                <div className="relative h-14 w-[260px] md:h-16 md:w-[320px]">
-                  <Image
-                    src="/logo/logo.png"
-                    alt="Hillel Latam Trip - Club Med Angra"
-                    fill
-                    sizes="320px"
-                    className="object-contain object-left"
-                    priority
-                  />
-                </div>
+                <img
+                  src="/logo/logo.png"
+                  alt="Hillel Latam Trip - Club Med Angra"
+                  className="h-14 w-auto md:h-16"
+                />
               </div>
 
               <p className="mt-4 text-base text-slate-200/90 md:text-lg">
@@ -122,11 +116,6 @@ export default function HomePage() {
 
       <section className="container-page pb-12 md:pb-16">
         <div className="card p-6">
-          <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-            <div>
-              <h2 className="text-xl font-semibold">Fotos</h2>
-            </div>
-          </div>
           <div className="mt-5">
             <Gallery />
           </div>
