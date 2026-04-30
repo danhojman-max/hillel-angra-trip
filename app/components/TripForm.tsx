@@ -83,9 +83,6 @@ export function TripForm() {
     <div className="card p-6">
       <div className="mb-5">
         <h3 className="text-lg font-semibold">Preinscripción</h3>
-        <p className="mt-1 text-sm text-slate-300">
-          Completá tus datos. Te llega a vos por Google Forms (mismo Form).
-        </p>
       </div>
 
       {state.status === "success" ? (

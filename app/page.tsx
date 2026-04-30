@@ -1,5 +1,6 @@
 import { Gallery } from "@/app/components/Gallery";
 import { TripForm } from "@/app/components/TripForm";
+import Image from "next/image";
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
@@ -22,11 +23,18 @@ export default function HomePage() {
                 <Pill>All inclusive</Pill>
               </div>
 
-              <h1 className="mt-5 text-3xl font-semibold tracking-tight md:text-5xl">
-                Hillel Latam Trip
-                <span className="text-sky-300"> · </span>
-                Club Med Angra
-              </h1>
+              <div className="mt-5">
+                <div className="relative h-14 w-[260px] md:h-16 md:w-[320px]">
+                  <Image
+                    src="/logo/logo.png"
+                    alt="Hillel Latam Trip - Club Med Angra"
+                    fill
+                    sizes="320px"
+                    className="object-contain object-left"
+                    priority
+                  />
+                </div>
+              </div>
 
               <p className="mt-4 text-base text-slate-200/90 md:text-lg">
                 4 días en un resort todo incluido con vista al mar. Playita, fútbol tenis,
@@ -93,26 +101,6 @@ export default function HomePage() {
               Club Med Angra está en la Costa Verde, entre mar y naturaleza. Ideal para desconectar
               y vivir unos días intensos de playa, deportes y comunidad.
             </p>
-            <div className="mt-4 text-xs text-slate-400">
-              Fuentes públicas (por si querés ampliar):{" "}
-              <a
-                className="underline underline-offset-4 hover:text-slate-200"
-                href="https://resortangra.com.br/resort-club-med/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                resortangra.com.br
-              </a>{" "}
-              ·{" "}
-              <a
-                className="underline underline-offset-4 hover:text-slate-200"
-                href="https://ganeshturismo.com.br/club-med-angra-dos-reis/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                ganeshturismo.com.br
-              </a>
-            </div>
           </div>
 
           <div className="card p-6">
@@ -137,28 +125,10 @@ export default function HomePage() {
           <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="text-xl font-semibold">Fotos</h2>
-              <p className="mt-1 text-sm text-slate-300">
-                Las imágenes se sirven desde <span className="font-mono">public/media/</span>.
-              </p>
             </div>
           </div>
           <div className="mt-5">
             <Gallery />
-          </div>
-        </div>
-      </section>
-
-      <section className="container-page pb-12 md:pb-16">
-        <div className="card p-6">
-          <h2 className="text-xl font-semibold">Video</h2>
-          <p className="mt-2 text-sm text-slate-300">
-            Si tenés un video, ponelo como <span className="font-mono">public/media/angra.mp4</span>{" "}
-            y se va a ver acá. Si está en YouTube/Drive, también lo podemos embeber.
-          </p>
-          <div className="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-black/30">
-            <video className="w-full" controls preload="metadata">
-              <source src="/media/angra.mp4" type="video/mp4" />
-            </video>
           </div>
         </div>
       </section>
@@ -175,9 +145,6 @@ export default function HomePage() {
               <p>
                 El menú va a ser <span className="font-semibold">“Kosher Style”</span>. Si tenés
                 alergias o restricciones, contalo en el formulario.
-              </p>
-              <p className="text-xs text-slate-400">
-                Al enviar, tus respuestas quedan guardadas en el Google Form original.
               </p>
             </div>
           </div>
