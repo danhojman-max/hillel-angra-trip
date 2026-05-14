@@ -1,6 +1,6 @@
-# Hillel Latam Trip - Club Med Angra (Landing + Preinscripción)
+# Hillel Latam Trip - Club Med Angra (Landing)
 
-Landing en Next.js + Tailwind con un formulario propio que **guarda respuestas en el Google Form original**.
+Landing en Next.js + Tailwind. La preinscripción está **cerrada**; el contacto es por **WhatsApp Web** desde la sección correspondiente de la home.
 
 ## Requisitos
 - Node.js 18+ (recomendado 20+)
@@ -14,13 +14,6 @@ npm run dev
 ```
 
 Abrí `http://localhost:3000`.
-
-## ¿Cómo funciona el formulario?
-El frontend manda los campos (los `entry.*`) a un endpoint local `POST /api/submit`, y ese endpoint hace `POST` al Google Form:
-
-- `https://docs.google.com/forms/d/e/1FAIpQLSdvAjmajPPdOayHQLeLTPGOEhu12Ze2Pw4GpA_BvtW1io7R_w/formResponse`
-
-Así evitamos problemas de CORS y las respuestas te llegan en Google Forms → Responses.
 
 ## Fotos y videos
 - Fotos usadas en la galería: `public/media/angra-1.jpeg` … `public/media/angra-4.jpeg`

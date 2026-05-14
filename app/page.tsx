@@ -1,5 +1,5 @@
 import { Gallery } from "@/app/components/Gallery";
-import { TripForm } from "@/app/components/TripForm";
+import { PreinscripcionCerrada } from "@/app/components/PreinscripcionCerrada";
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
@@ -51,7 +51,7 @@ export default function HomePage() {
 
               <div className="mt-7 flex flex-wrap gap-3">
                 <a className="btn-primary" href="#preinscripcion">
-                  Preinscribirme
+                  Consultas
                 </a>
                 <a className="btn-secondary" href="#info">
                   Ver info
@@ -107,7 +107,7 @@ export default function HomePage() {
             </ul>
             <div className="mt-5">
               <a className="btn-secondary w-full" href="#preinscripcion">
-                Ir al formulario
+                Consultas por WhatsApp
               </a>
             </div>
           </div>
@@ -125,20 +125,21 @@ export default function HomePage() {
       <section id="preinscripcion" className="container-page pb-16">
         <div className="grid gap-8 md:grid-cols-2 md:items-start">
           <div className="card p-6">
-            <h2 className="text-xl font-semibold">Antes de llenar</h2>
+            <h2 className="text-xl font-semibold">Preinscripción</h2>
             <div className="mt-3 space-y-3 text-sm text-slate-300">
               <p>
-                Esto es una <span className="font-semibold text-slate-100">preinscripción</span>.
-                Los cupos son limitados.
+                La preinscripción online ya no está disponible:{" "}
+                <span className="font-semibold text-slate-100">los cupos están completos</span>.
               </p>
               <p>
-                El menú va a ser <span className="font-semibold">“Kosher Style”</span>. Si tenés
-                alergias o restricciones, contalo en el formulario.
+                Si necesitás algo puntual, el equipo sigue disponible por{" "}
+                <span className="font-semibold text-slate-100">WhatsApp</span> desde el cartel de
+                al lado.
               </p>
             </div>
           </div>
 
-          <TripForm />
+          <PreinscripcionCerrada />
         </div>
       </section>
 
